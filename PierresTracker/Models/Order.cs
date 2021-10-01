@@ -23,7 +23,7 @@ namespace PierresTracker.Models
 
     public static void ClearAll()
     {
-      _instances.Clear()
+      _instances.Clear();
     }
     
     public static List<Order> GetAll()
