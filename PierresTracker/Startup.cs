@@ -31,7 +31,7 @@ namespace PierresTracker
       app.UseEndpoints(routes =>
       {
         routes.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}"); 
-      })
+      });
     }
   }
 }
