@@ -1,9 +1,9 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
-using Order.Models;
+using PierresTracker.Models;
 using System;
 
-namespace Order.Tests
+namespace PierresTracker.Tests
 {
   [TestClass]
   public class OrderTests : IDisposable
@@ -34,7 +34,7 @@ namespace Order.Tests
       string receivedDate = newOrder.Date;
       string recievedPrice = newOrder.Price;
       Assert.AreEqual(title, recievedTitle);
-      Assert.AreEqual(description, recievedDesc);
+      Assert.AreEqual(description, receivedDesc);
       Assert.AreEqual(date, receivedDate);
       Assert.AreEqual(price, recievedPrice);
     }
@@ -44,7 +44,7 @@ namespace Order.Tests
     {
       List<Order> newList = new List<Order> { };
       List<Order> recieved = Order.GetAll();
-      CollectionAssert.AreEqual(newList, result);
+      CollectionAssert.AreEqual(newList, recieved);
     }
 
     [TestMethod]

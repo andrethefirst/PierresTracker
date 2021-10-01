@@ -1,9 +1,9 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
-using Vendor.Models;
+using PierresTracker.Models;
 using System;
 
-namespace Vendor.Tests
+namespace PierresTracker.Tests
 {
   [TestClass]
   public class VendorTests : IDisposable
@@ -40,7 +40,7 @@ namespace Vendor.Tests
       string description = "description";
       Vendor newVendor = new Vendor(name, description);
       int recieved = newVendor.Id;
-      Assert.AreEqual(1, result);
+      Assert.AreEqual(1, recieved);
     }
 
     [TestMethod]
