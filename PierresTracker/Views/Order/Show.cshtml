@@ -1,0 +1,24 @@
+@{
+  Layout = "_Layout";
+}
+<div class="orders">
+  <div class="row">
+    <div class="col-2">
+      <h4><b>Title:</b></h4>
+      <h4><b>Date:</b></h4>
+      <h4><b>Price:</b></h4>
+      <h4><b>Description;</b></h4>
+    </div>
+    <div class="col-4">
+      <h4>@Model["order"].Title</h4>
+      <h4>@Model["order"].Date</h4>
+      <h4>@Model["order"].Price</h4>
+      <h4>@Model["order"].Description</h4>
+    </div>
+  </div>
+</div>
+<div class="orderButton">
+  <a href='/vendor/@Model["vendor"].Id/order/new'><button class="btn btn-success">Add another item</button></a>
+  <a href='/vendor/@Model["vendor"].Id/'><button class="btn btn-success">View orders for vendor</button></a>
+  <a href='/vendor'><button class="btn btn-success">Vendors</button></a>
+</div>

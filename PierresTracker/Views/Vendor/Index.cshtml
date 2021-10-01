@@ -1,0 +1,19 @@
+@{
+  Layout = "_Layout";
+}
+
+@using PierresTracker.Models;
+
+<h1>Vendors</h1>
+
+<ol>
+@foreach (Vendor vendor in Model)
+{
+  <li>
+    <h3><a href='/vendor/@vendor.Id'>@vendor.Name</a> - @vendor.Description</h3>
+  </li>
+}
+</ol>
+
+<a href='/vendor/new'><button class="btn btn-success">Add a New Vendor</button></a>
+<a href='/'><button class="btn btn-success">Home</button></a>
