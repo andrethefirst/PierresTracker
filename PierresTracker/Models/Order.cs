@@ -33,7 +33,7 @@ namespace PierresTracker.Models
 
     public static Order Find(int searchId)
     {
-      return _instances[searchId-1]; //index placement
+      return _instances[searchId]; //index placement
     }
   }
 }

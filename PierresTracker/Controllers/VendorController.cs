@@ -37,5 +37,18 @@ namespace PierresTracker.Controllers
       model.Add("orders", vendorOrders);
       return View(model);
     }
+
+    [HttpPost("/vendor/{vendorId}/orders")]
+    public ActionResult New(int vendorId, string title, string description, string date, string price)
+    {
+      Dictionary<string, object> model = new Dictionary<string, object>();
+      Vendor arbyVendor = Vendor.Find(vendorId);
+      Order newOrder =new Order(title, description, date, price);
+      arbyVendor.AddOrder(newOrder);
+      List<Order> vendorOrders = arbyVendor.Orders;
+      model.Add("orders", vendorOrders);
+      model.Add("vendor", arbyVendor);
+      return View("Show", model);
+    }
   }
 }
